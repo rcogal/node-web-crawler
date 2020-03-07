@@ -15,10 +15,13 @@ inquirer
       includeAssets: answers.include === 'yes' ? true : false
     });
 
-    console.log('Now scanning');
+    console.log('Now scanning...');
+
     crawler.run().then( scannedResources => {
       console.log(scannedResources);
+      console.log('Finished scanning')
     });
+
 
   })
   .catch(error => {
